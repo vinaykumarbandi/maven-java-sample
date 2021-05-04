@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'java -jar -Dserver.port=8001 C:\Users\Vinay\Jenkins\jenkins home\workspace\MavenJavaSample\target\*.jar'
+                bat 'java -jar -Dserver.port=8001 target/spring-petclinic-2.3.1.BUILD-SNAPSHOT.jar'
             }
         }
     }
