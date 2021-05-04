@@ -17,5 +17,10 @@ pipeline {
                 bat 'mvn package'
             }
         }
+        stage('Deploy') {
+            steps {
+                bat 'java -jar -Dserver.port=8001 target/*.jar'
+            }
+        }
     }
 }
